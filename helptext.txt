@@ -21,6 +21,8 @@ la pagina [Preferenze di visualizzazione] (Impostazioni / Impostazioni di visual
 poiché questo in genere li fa avviare; invece viene visualizzato il simbolo "*". Mostra anche il simbolo "*" per i dispositivi SSD e Flash, anche se a volte questi dispositivi riportano un file
 temperatura, e talvolta restituiscono il valore "0".
 
+** Dimensioni, Usato, Libero ** indica la dimensione totale del dispositivo, lo spazio utilizzato e lo spazio rimanente per i file. Le
+unità vengono configurate anche nella pagina [Preferenze di visualizzazione] (Impostazioni / Impostazioni di visualizzazione).la quantità di spazio utilizzata sarà diversa da zero anche per un disco vuoto a causa del sovraccarico del file system.
 
 * Nota: per un pool di cache multi-dispositivo, questi dati sono per l'intero pool come restituito da btrfs. *
 
@@ -271,7 +273,7 @@ Se * Ripara blocchi danneggiati * è selezionato, * btrfs scrub * riparerà i bl
 : info_btrfs_check_help:
 ** Check ** eseguirà il programma * btrfs check * per verificare l'integrità del file system sul dispositivo.
 
-Il campo * Opzioni * è inizializzato con * - readonly * che specifica solo il controllo. Se è necessaria una riparazione, dovresti correre
+Il campo * Opzioni * è inizializzato con * - readonly * che specifica solo il controllo. Se è necessaria una riparazione, dovresti avviare
 un secondo Check pass, setting setting the *Options* to *--repair*; this will permit *btrfs check* to fix the file system.
 
 After starting a Check, you should Refresh to monitor progress and status.  Depending on
